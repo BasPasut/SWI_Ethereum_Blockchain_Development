@@ -6,8 +6,8 @@ const web3 = new Web3('https://ropsten.infura.io/v3/633304bc08db4a8f81dce365f6ae
 // const privateKey1 = Buffer.from(process.env.PRIVATE_KEY_1, 'hex')
 
 
-const contractABI = [
-    {
+    const contractABI = [
+        {
       constant: true,
       inputs: [],
       name: "name",
@@ -125,9 +125,9 @@ const contractABI = [
       type: "event"
     }
   ];
-  const contractAddress = "0x5f5Fd4764Da8Ae81d133B8A4e5B20981d6A0376e";
-  var dapptokenContract = new web3.eth.Contract(contractABI, contractAddress);
-  console.log(dapptokenContract);
+    const contractAddress = "0xd03696B53924972b9903eB17Ac5033928Be7D3Bc";
+    const contract = new web3.eth.Contract(contractABI, contractAddress);
+  
 
 
 // drapptokenContract.methods.balanceOf(account1).call((err, result) => {
@@ -146,16 +146,18 @@ const contractABI = [
 //         gasPrice: web3.utils.toHex(web3.utils.toWei('10','gwei')),
 //         data:  data
 //     }
-// })
 
-//     // Sigm the transaction
-//     const tx = new Tx(txCount)
+//      // Sign the transaction
+//     const tx = new Tx(txObject)
 //     tx.sign(privateKey1)
 
 //     const serializedTx = tx.serialize()
-//     const row = '0x' + serializedTx.toString('hex')
+//     const raw = '0x' + serializedTx.toString('hex')
 
 //     //Broadcast the transaction
 //     web3.eth.sendSignedTransaction(raw, (err,txHash) => {
 //         console.log('err:',err, 'txHash: ', txHash);
 //     })
+
+// })
+  
